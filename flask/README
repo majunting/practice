@@ -1,0 +1,12 @@
+Tutorial from: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+To run the project:
+activate virtual environment - conda activate flask
+- flask run
+- 127.0.0.1:5000 or localhost:5000
+
+package versions:
+flask - 2.0.2
+python - 3.10.0
+jinja2 - 3.0.2
+python-dotenv - 0.19.1
