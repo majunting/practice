@@ -13,4 +13,4 @@ login.login_view = 'login'
 # # another straightaway method to add configurations (not recommended)
 # app.config['SECRET_KEY'] = 'secret_key'
 
-from app import routes
+from app import routes, models

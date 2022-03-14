@@ -32,4 +32,4 @@ class Post(db.Model):
 
 @login.user_loader
 def load_user(id):
-    return user.query.get(int(id))
+    return User.query.get(int(id))
