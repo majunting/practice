@@ -2,6 +2,7 @@ Tutorial from: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part
 
 To run the project:
 activate virtual environment - conda activate flask
+to run in debug mode - set FLASK_ENV=development (default 'production')
 - flask run
 - 127.0.0.1:5000 or localhost:5000
 
