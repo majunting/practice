@@ -69,3 +69,9 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 [parameters: ('test2', 'adfadf', 3)]
 (Background on this error at: https://sqlalche.me/e/14/gkpj)
 2022-03-16 17:37:45,497 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-16 17:59:38,918 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-16 18:00:04,137 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-16 18:02:05,427 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-16 18:02:57,977 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-16 18:05:54,367 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-16 18:06:07,997 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
