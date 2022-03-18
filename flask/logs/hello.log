@@ -1,15 +1,4 @@
-2022-03-16 17:34:22,157 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-16 17:34:58,277 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-16 17:35:07,322 ERROR: Exception on /edit_profile [POST] [in C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py:1457]
-Traceback (most recent call last):
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
-    self.dialect.do_execute(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.IntegrityError: UNIQUE constraint failed: user.username
-
-The above exception was the direct cause of the following exception:
-
+2022-03-18 18:04:36,434 ERROR: Exception on /user/test [GET] [in C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py:1457]
 Traceback (most recent call last):
   File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -21,57 +10,86 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\routes.py", line 83, in edit_profile
-    db.session.commit()
-  File "<string>", line 2, in commit
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\session.py", line 1431, in commit
-    self._transaction.commit(_to_root=self.future)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
-    self._prepare_impl()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
-    self.session.flush()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
-    self._flush(objects)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\session.py", line 3502, in _flush
-    with util.safe_reraise():
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
-    compat.raise_(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
-    raise exception
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
-    flush_context.execute()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
-    rec.execute(self)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
-    util.preloaded.orm_persistence.save_obj(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\persistence.py", line 236, in save_obj
-    _emit_update_statements(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\orm\persistence.py", line 1000, in _emit_update_statements
-    c = connection._execute_20(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1620, in _execute_20
-    return meth(self, args_10style, kwargs_10style, execution_options)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
-    return connection._execute_clauseelement(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1487, in _execute_clauseelement
-    ret = self._execute_context(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1851, in _execute_context
-    self._handle_dbapi_exception(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\engine\base.py", line 2032, in _handle_dbapi_exception
-    util.raise_(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
-    raise exception
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
-    self.dialect.do_execute(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
-[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('test2', 'adfadf', 3)]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-03-16 17:37:45,497 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-16 17:59:38,918 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-16 18:00:04,137 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-16 18:02:05,427 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-16 18:02:57,977 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-16 18:05:54,367 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-16 18:06:07,997 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\routes.py", line 106, in user
+    return render_template('user.html', title = 'Profile', user = user,
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\user.html", line 38, in <module>
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2022-03-18 18:04:44,463 ERROR: Exception on /user/test [GET] [in C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\routes.py", line 106, in user
+    return render_template('user.html', title = 'Profile', user = user,
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\user.html", line 38, in <module>
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2022-03-18 18:04:51,061 ERROR: Exception on /user/test2 [GET] [in C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\routes.py", line 106, in user
+    return render_template('user.html', title = 'Profile', user = user,
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\user.html", line 38, in <module>
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2022-03-18 18:05:32,468 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-18 18:07:08,338 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
