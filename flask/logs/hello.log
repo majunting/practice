@@ -93,3 +93,6 @@ Traceback (most recent call last):
 jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
 2022-03-18 18:05:32,468 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
 2022-03-18 18:07:08,338 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-21 11:51:10,806 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-21 11:52:23,119 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-21 11:52:58,841 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
