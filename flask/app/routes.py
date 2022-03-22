@@ -6,31 +6,40 @@ from flask_login import logout_user
 
 from app import app
 from app import db
-from app.models import User
+from app.models import User, Post
 from app.forms import LoginForm
 from app.forms import RegistrationForm
 from app.forms import EditProfileForm
 from app.forms import EmptyForm
+from app.forms import PostForm
 
 from werkzeug.urls import url_parse
 from datetime import datetime
 
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods = ['GET', 'POST'])
+@app.route('/index', methods = ['GET', 'POST'])
 @login_required
 def index():
-    user = {'username': 'user1'}
-    posts = [
-        {
-            'author': {'username': 'user2'},
-            'body': 'Post 1'
-        },
-        {
-            'author': {'username': 'user3'},
-            'body': 'Post2'
-        }
-    ]
-    return render_template('index.html', title = 'home', posts = posts)
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body = form.post.data, author = current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live')
+        return redirect(url_for('index'))
+    # user = {'username': 'user1'}
+    # posts = [
+    #     {
+    #         'author': {'username': 'user2'},
+    #         'body': 'Post 1'
+    #     },
+    #     {
+    #         'author': {'username': 'user3'},
+    #         'body': 'Post2'
+    #     }
+    # ]
+    posts = current_user.followed_posts().all()
+    return render_template('index.html', title = 'home', posts = posts, form = form)
 #   return '''
 # <html>
 #     <head>
