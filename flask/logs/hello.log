@@ -1,4 +1,4 @@
-2022-03-22 11:02:28,539 ERROR: Exception on /index [GET] [in C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py:1457]
+2022-03-28 12:52:45,805 ERROR: Exception on /user/test [GET] [in C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py:1457]
 Traceback (most recent call last):
   File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,72 +10,7 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\routes.py", line 41, in index
-    return render_template('index.html', title = 'home', posts = posts)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\index.html", line 1, in <module>
-    {% extends 'base.html' %} <!-- template inheritance -->
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\base.html", line 30, in <module>
-    {% block content %}{% endblock %}
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\index.html", line 6, in <module>
-    {{ form.hidden_tag() }}
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2022-03-22 11:03:37,691 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-22 11:03:40,719 ERROR: Exception on /index [GET] [in C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py:1457]
-Traceback (most recent call last):
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\routes.py", line 41, in index
-    return render_template('index.html', title = 'home', posts = posts)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\index.html", line 1, in <module>
-    {% extends 'base.html' %} <!-- template inheritance -->
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\base.html", line 30, in <module>
-    {% block content %}{% endblock %}
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\templates\index.html", line 6, in <module>
-    {{ form.hidden_tag() }}
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2022-03-22 11:04:30,063 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-22 11:08:43,399 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
-2022-03-22 11:08:45,433 ERROR: Exception on /index [GET] [in C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py:1457]
-Traceback (most recent call last):
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\junting.ma\Documents\Documents\Anaconda\envs\flask\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\routes.py", line 41, in index
-    posts = current_user.followed_posts.all()
-AttributeError: 'function' object has no attribute 'all'
-2022-03-22 11:09:09,371 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+  File "C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\routes.py", line 121, in user
+    posts = Post.query.filter_by(author.username == username).order_by(Post.timestamp.desc()).all()
+NameError: name 'author' is not defined
+2022-03-28 13:03:28,480 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]

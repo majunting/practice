@@ -50,6 +50,12 @@ def index():
 #     </body>
 # </html>'''
 
+@app.route('/explore')
+@login_required
+def explore():
+    posts = Post.query.order_by(Post.timestamp.desc()).all()
+    return render_template('index.html', title = 'Explore', posts = posts)
+
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -108,10 +114,11 @@ def logout():
 def user(username):
     form = EmptyForm()
     user = User.query.filter_by(username = username).first_or_404()
-    posts = [
-        {'author': user, 'body': 'Test post 1'},
-        {'author': user, 'body': 'Test post 2'}
-    ]
+    # posts = [
+    #     {'author': user, 'body': 'Test post 1'},
+    #     {'author': user, 'body': 'Test post 2'}
+    # ]
+    posts = Post.query.filter_by(user_id = user.id).order_by(Post.timestamp.desc()).all()
     return render_template('user.html', title = 'Profile', user = user, 
         posts = posts, form = form)
 
