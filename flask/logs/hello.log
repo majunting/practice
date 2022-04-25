@@ -14,3 +14,4 @@ Traceback (most recent call last):
     posts = Post.query.filter_by(author.username == username).order_by(Post.timestamp.desc()).all()
 NameError: name 'author' is not defined
 2022-03-28 13:03:28,480 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
+2022-03-28 17:44:28,896 INFO: Hello [in C:\Users\junting.ma\Documents\Documents\GitHub\practice\flask\app\__init__.py:33]
