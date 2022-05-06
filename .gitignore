@@ -1,3 +1,4 @@
+./flask/logs/*
 *.pyc
 *.log
 *.log.*
